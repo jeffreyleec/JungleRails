@@ -7,10 +7,28 @@
       
     </h1>
   <% end%>
+
+  
+
   <div>
-    <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' ,
+  <% if product.quantity < 1 %>
+  <button type="submit" class="soldout">
+ Sold out<i class="fa"></i>
+  </button>
+
+<%= button_to add_item_cart_path(product_id: product.id),  class: 'btn' , disabled: true, 
     method: :post do %>
+      
       <%= fa_icon "shopping-cart", text: 'Add' %> 
     <% end %>
+ <% end %>
+
+ <% if product.quantity > 0 %>
+    <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' ,
+    method: :post do %>
+      
+      <%= fa_icon "shopping-cart", text: 'Add' %> 
+    <% end %>
+    <% end %>  
   </div>
 </article>
