@@ -47,10 +47,9 @@
        
       </ul>
       <ul class="navbar-nav">
-      
       <% if current_user %>
       <li class="nav-item"> 
-      Signed in as <span class= "nav-link"><%= current_user.first_name %> </span>
+      <span class= "nav-link">Signed in as <%= current_user.first_name %> </span>
       </li>
       <li class="nav-item">
       <%= link_to 'Logout', '/logout', class: "nav-link" %>
@@ -63,7 +62,6 @@
       <%= link_to 'Signup', '/signup', class: "nav-link" %>
       </li>
       <% end %>
-
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle text-danger"
@@ -75,8 +73,6 @@
           >
             Admin
           </a>
-
-
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link" %></li>
             <li><%= link_to 'Products', [:admin, :products], class: "nav-link" %></li>
