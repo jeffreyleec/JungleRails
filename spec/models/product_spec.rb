@@ -76,7 +76,7 @@ RSpec.describe Product, type: :model do
   end
 
   context 'empty category_id field ' do 
-    it 'expects error message - Category cant be blank' do
+    it 'expects error message - Category can\'t be blank' do
     @category = Category.create(
       name: "plants"
     )
