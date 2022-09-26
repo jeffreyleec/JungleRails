@@ -17,8 +17,7 @@ RSpec.describe Product, type: :model do
       quantity: 1,
       category_id: @category.id
     )
-    #puts @product.errors.full_messages
-    #expect(@product.errors.full_messages).to include "Name can't be blank"
+
     expect(@product).to be_present
    end
   end
@@ -36,8 +35,7 @@ RSpec.describe Product, type: :model do
       quantity: 1,
       category_id: @category.id
     )
-    # puts @product.errors.full_messages
-    # puts '13123123asdasdsadasd'
+
     expect(@product.errors.full_messages).to include "Name can't be blank"
     
    end
@@ -55,7 +53,7 @@ RSpec.describe Product, type: :model do
       quantity: 1,
       category_id: @category.id
     )
-     #puts @product.errors.full_messages
+ 
     expect(@product.errors.full_messages).to include "Price cents can't be blank"  
    end
   end
@@ -72,7 +70,7 @@ RSpec.describe Product, type: :model do
       quantity: nil,
       category_id: @category.id
     )
-     #puts @product.errors.full_messages
+
     expect(@product.errors.full_messages).to include "Quantity can't be blank"  
    end
   end
@@ -82,14 +80,12 @@ RSpec.describe Product, type: :model do
     @category = Category.create(
       name: "plants"
     )
-
     @product = Product.create(
       name: 'flower',
       price_cents: 500,
       quantity: 1,
       category_id: nil
     )
-     #puts @product.errors.full_messages
     expect(@product.errors.full_messages).to include "Category can't be blank"  
    end
   end
