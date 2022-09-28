@@ -31,7 +31,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Stripe
 
 
-!["Edit existing URLs"]()
-!["Edit existing URLs"]()
-!["Edit existing URLs"]()
-!["Edit existing URLs"]()
+!["Products Page"](https://github.com/jeffreyleec/JungleRails/blob/master/imgs/Screen%20Shot%202022-09-28%20at%205.48.15%20PM.png)
+!["Admin Product CRUd"](https://github.com/jeffreyleec/JungleRails/blob/master/imgs/adminUpdateCategories.png)
+!["Admin Product CRUD"](https://github.com/jeffreyleec/JungleRails/blob/master/imgs/adminUpdateProducts.png)
+!["Checkout Cart Page"](https://github.com/jeffreyleec/JungleRails/blob/master/imgs/cart.png)
